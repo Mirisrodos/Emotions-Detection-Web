@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xử lý ảnh</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <section class="home">
+    <header>
+        <nav>
+          <span>
+            <div class="logo">
+              <img src="/static/images/logo.png" alt="" class="logo_dt">
+              <div class="name_university inline">
+                  <div class="tdh">
+                      <h2><b>Trường Đại Học Sư Phạm Kỹ Thuật TP.Hồ Chí Minh</b> <span class="badge text-bg-danger">Nhóm 3</span></h2>
+                  </div>
+                  <div class="name">
+                      HCMC University of Technology and Education
+                  </div>
+                  <div class="name-eng">
+                      Project Xử Lý Ảnh Số - Nhận Diện Cảm Xúc
+                  </div>
+              </div>
+              <div class="inline">
+                <div class="label">
+                  <h2><b>XLAS</b></h2>
+              </div>
+              </div>
+              <!-- <img src="asset/image/logo_clc.png" alt="" class="logo_clc"> -->
+          </div>
+
+            <div class="container p-4 inline">     
+              <div class="row">     
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Thành viên nhóm:</h5>
+                  <p>
+                    Trương Thuận Hòa - 20110CLST4 <br>
+                    Phan Hồng Sơn - 20110CLST5<br>
+                    Nguyễn Thành Đạt - 20110CLST3
+                  </p>
+                </div>
+            
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Giảng viên:</h5>
+                  <p>
+                    TS. Hoàng Văn Dũng
+                  </p>
+                </div>
+              </div>
+            </div>
+          </span>
+            
+        </nav>
+    </header>
+    
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://toplist.vn/images/800px/truong-dai-hoc-su-pham-ki-thuat-tp-ho-chi-minh-76305.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://tincuaban.com/wp-content/uploads/2020/07/2-Kham-Pha-Truong-Dai-Hoc-Su-Pham-Ky-Thuat.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://th.bing.com/th/id/OIP.ncx50kjTcrzs10luy_HAawHaDt?pid=ImgDet&rs=1" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+        
+    
+
+        <div class="content">
+            <div class="project_name">
+                <b><i>Xử Lý Ảnh Số - DIPR430685_22_2_05CLC</i></b>
+            </div>
+            <div class="solution">
+                <div class="img-traffic">
+                    <img src="/static/images/{{img_old}}" alt="" class="img_traffic" id="img_traffic" onerror="this.src='/static/images/placeholder.jpg'">
+                </div>
+                <div class="list-img-traffic">
+                    <img src="{{img_rcn}}" alt="" class="img_traffic" onerror="this.src='/static/images/placeholder.jpg'">
+                </div>
+            </div>
+            <div class="button">
+              <form action="/upload" method="post" enctype="multipart/form-data" id="myform">
+                <label for="" style="margin-right: 10px;">Thêm ảnh: </label><input type="file" name="source" onchange="previewImage(this, 'img_traffic');">
+                <h4></h4>
+                <button type="submit" class="btn btn-success">Nhận dạng</button>
+              </form>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+        
+        <div  style="background-color: rgba(0, 0, 0, 0.2);">
+            <img src="/static/images/signR.jpg" alt="Girl in a jacket" width="1410" height="1000">
+        </div>
+      </footer>
+</section>
+      <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" type="text/javascript"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+      <script>
+        function previewImage(input, idImg) {
+            idImg = '#' + idImg;
+            if (input.files && input.files[0]) {
+            var reader = new FileReader();
+        
+            reader.onload = function(e) {
+                $(idImg).attr('src', e.target.result);
+            }
+        
+            reader.readAsDataURL(input.files[0]);
+            }
+        }
+      </script>
+</body>
+</html>

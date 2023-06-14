@@ -1,0 +1,171 @@
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #c3305e;
+  }
+  .home {
+  }
+  .home header {
+    background-color: #ffffff;
+    padding: 0 30px;
+  }
+  .home header nav .logo {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  .home header nav .logo .name_university {
+    font-size: 24px;
+    font-weight: bold;
+    color: #82848b;
+  }
+  .home header nav .logo .name_university .tdh {
+    font-family: 'Times New Roman', serif;
+    color: #4b4747;
+  }
+  .home header nav .logo .name_university .tdh span {
+    color: #4CAF50;
+    background: #9104b5;
+  }
+  .home header nav .logo .name_university .name {
+    font-weight: normal;
+  }
+  .carousel-inner {
+    height: 500px;
+    margin-left: 0;
+  }
+  .home header nav .logo .name_university .name::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 1px 0;
+    background-color: #2f55a8;
+  }
+  .home header nav .logo .name_university .name-eng {
+    color: #b6036e;
+    font-weight: bold;
+  }
+  
+  .home .content {
+    padding: 0 30px;
+  }
+  
+  .home .content .project_name {
+    font-size: 40px;
+    margin: 30px 0;
+    color: #2c2929;
+    font-weight: bolder;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .home .content .solution {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 100%;
+  }
+  .home .content .solution .img-traffic,
+  .home .content .solution .list-img-traffic {
+    width: 97%;
+    display: block;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    padding: 10px;
+    box-shadow: 0 2px 10px #000;
+  }
+  .home .content .solution .img-traffic img,
+  .home .content .solution .list-img-traffic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .home .content .solution .list-img-traffic .contain {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  .home .content .solution .list-img-traffic .contain img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .home .content .button {
+    margin: 30px 0;
+  }
+  .home .content .button label{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .home .content .button input{
+    font-size: 18px;
+    font-weight: normal;
+  }
+  
+  .home .content .button button {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .home .content .button .load_img {
+    position: relative;
+  }
+  .home .content .button .load_img .img_load{
+    position: absolute;
+    /* display: none; */
+    opacity: 0;
+  }
+  
+  footer{
+    background-color: #fff;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inline { 
+    display: inline-block; 
+    margin:10px;
+    }
+  .inline .label { 
+      display: inline-block; 
+      margin-left:160px;
+  }
+
+  .inline .label h2 { 
+    font-size: 100px;
+}
